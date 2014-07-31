@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get '/create_user' => 'users#create'
   
   # CREATE BOOKMARK
-  get '/users/:id/bookmarknew' => 'bookmarks#bookmarknew'
-  get '/users/:id/bookmarkcreate' => 'bookmarks#bookmarkcreate'
+  get '/bookmarknew' => 'bookmarks#bookmarknew'
+  get '/bookmarkcreate' => 'bookmarks#bookmarkcreate'
 
   # READ
   get '/users' => 'users#index'
@@ -15,12 +15,15 @@ Rails.application.routes.draw do
   # UPDATE
   get '/users/:id/edit' => 'users#edit'
   get '/users/:id/update' => 'users#update'
+  get '/:id/editbookmark' => 'bookmarks#edit'
+  get '/:id/update' => 'bookmarks#update'
 
   # DELETE
   get '/users/:id/destroy' => 'users#destroy'
+  get '/:id/destroy' => 'bookmarks#destroy'
   
   get '/users/:id/bookmarks' => 'bookmarks#bookmarkindex'
-  get '/users/:id/bookmark' => 'bookmarks#bookmarkshow'
+  get '/:id/bookmark' => 'bookmarks#bookmarkshow'
   #------------------------------
 
   # The priority is based upon order of creation: first created -> highest priority.

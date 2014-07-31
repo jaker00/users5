@@ -17,10 +17,10 @@
   <% @bookmarks.each do |bookmark| %>
     <tr>
       <li><% @bookmarks.name %></li>
-          <a href="/users/<%= user.id %>/bookmark">Show</a>
+          <a href="/<%= bookmark.id %>/bookmark">Show</a>
         
-      <td><a href="/users/<%= bookmark.id %>/edit">Edit</a></td>
-      <td><a href="/users/<%= bookmark.id %>/destroy">Destroy</a></td>
+      <td><a href="/<%= bookmark.id %>/edit">Edit</a></td>
+      <td><a href="/<%= bookmark.id %>/destroy">Destroy</a></td>
     </tr>
   <% end %>
   </ul>

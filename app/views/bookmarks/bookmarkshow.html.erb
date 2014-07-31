@@ -1,10 +1,10 @@
 <div>
   <strong>Bookmark</strong><br />
-  <p><%= @bookmark.name %></p>
+  <p><%= @b.name %></p>
 </div>
 <div>
-  <p><%= @bookmark.description %></p>
+  <p><%= @b.description %></p>
 </div>
 
-<a href="/users/<%= @b.id %>/editbookmark">Edit</a> |
-<a href="/users/<%= @b.id %>/destroybookmark">Destroy</a>
+<a href="/<%= @b.id %>/editbookmark">Edit</a> |
+<a href="/<%= @b.id %>/destroybookmark">Destroy</a>
